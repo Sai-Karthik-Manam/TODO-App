@@ -1,0 +1,224 @@
+/* Body and background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+    min-height: 100vh;
+    padding: 0;
+    color: white;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 1em 2em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nav-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links a {
+    color: #ffd9ec;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Welcome message */
+.welcome-message {
+    text-align: center;
+    margin: 2em auto 1em;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5em;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.welcome-message h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #ffe4fa;
+}
+
+.welcome-message p {
+    font-size: 1.1em;
+    color: #ffd6f9;
+}
+
+.search-bar {
+    position: absolute;
+    top: 4.5em;
+    right: 30px;
+    z-index: 10;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9em;
+    width: 180px;
+}
+
+.search-bar button {
+    background-color: #ff80bf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 6px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transform: translateY(-6px);
+}
+
+.search-bar button:hover {
+    background-color: #ff5fa6;
+}
+
+
+/* Notes container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Note card style */
+.note-card {
+    background: rgba(1, 217, 255, 0.493);
+    border-radius: 20px;
+    padding: 1.5em;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.945);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.2s ease-in-out;
+}
+
+.note-card h3 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.note-card p {
+    margin: 0 0 10px;
+    color: white;
+    word-wrap: break-word;
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+.note-card small {
+    font-size: 0.85em;
+    margin-bottom: 10px;
+    color: #e0f7ff;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions a {
+    color: #ffbdbd;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: color 0.2s ease-in-out;
+}
+
+.actions a:hover {
+    color: #fff0f5;
+}
+
+
+/* Form container */
+.form-container {
+    background: rgba(231, 65, 157, 0.267);
+    border-radius: 15px;
+    padding: 2em;
+    max-width: 400px;
+    margin: 2em auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Form inputs and button */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+form button {
+    background-color: #ff80bf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+    background-color: #ff5fa6;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+    .note-card {
+        width: 90%;
+    }
+
+    .form-container {
+        margin: 1em;
+    }
+
+    .welcome-message {
+        margin: 1.5em 1em;
+    }
+}
